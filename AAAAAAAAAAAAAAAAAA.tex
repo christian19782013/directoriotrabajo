@@ -1,0 +1,238 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[spanish]{beamer}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % this default might be overridden by plain title style
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ % (ERT) argument for the TOC
+ \AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usetheme{Warsaw}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+\makeatother
+
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+
+
+
+
+\title[Título breve alternativo ]{Título tal como aparecerá en la presentación}
+
+
+\subtitle{Entorno sólo para poner un subtítulo al artículo}
+
+
+\author[Autor, Otro]{F.~Autor\inst{1} \and S.~Otro\inst{2}}
+
+
+\institute[Universidades de Algún Sitio y de Otro Sitio]{\inst{1}Departamento de Informática\\
+Universidad de Algún Sitio\and \inst{2}Departamento de Filosofía
+Teórica\\
+Universidad de Otro Sitio}
+
+
+\date[CFP 2003
+
+]{Conferencia sobre Presentaciones Fabulosas, 2003}
+
+\makebeamertitle
+
+
+%\pgfdeclareimage[height=0.5cm]{institution-logo}{institución-logo-nombrearchivo}
+%\logo{\pgfuseimage{institution-logo}}
+
+
+
+\AtBeginSubsection[]{%
+  \frame<beamer>{ 
+    \frametitle{Índice}   
+    \tableofcontents[currentsection,currentsubsection] 
+  }
+}
+
+
+
+%\beamerdefaultoverlayspecification{<+->}
+\begin{frame}{Índice}
+
+
+\tableofcontents{}
+
+
+
+
+\end{frame}
+
+\section{Motivación}
+
+
+\subsection[Problema básico]{El problema básico que estudiamos}
+\begin{frame}{Poner títulos informativos}
+
+
+\framesubtitle{Los subtítulos de los fotogramas son opcionales.}
+\begin{itemize}
+\item Usar Enumeración{*} a discreción.
+
+
+\pause{}
+
+\item Usar oraciones muy cortas o frases cortas.
+
+
+\pause{}
+
+\item Estos solapados se crean usando el estilo Pausa.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Poner títulos informativos }
+
+\begin{itemize}
+\item<1-> También se pueden usar estas especificaciones para crear solapados 
+\item<3-> Esto permite presentar cosas en cualquier orden
+\item<2-> Ésta se muestra en segundo lugar
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Poner títulos informativos}
+
+\begin{block}<1->{}
+
+\begin{itemize}
+\item Bloque sin título.
+\item Mostrado en todas las diapositivas.
+\end{itemize}
+\end{block}
+\begin{exampleblock}<2->{Título de algún Bloque de ejemplo}
+
+\begin{itemize}
+\item $e^{i\pi}=-1$.
+\item $e^{i\pi/2}=i$.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+\subsection{Trabajo previo}
+\begin{frame}{Poner títulos informativos}
+
+
+
+\begin{example}<1->
+En la primera diapositiva.
+\end{example}
+
+
+
+\begin{example}<2->
+En la segunda diapositiva.
+\end{example}
+
+\end{frame}
+
+\section{Nuestros resultados/Contribución}
+
+
+\subsection{Resultados principales}
+\begin{frame}{Poner títulos informativos}
+
+\begin{theorem}
+En la primera diapositiva.
+\end{theorem}
+
+
+\pause{}
+\begin{corollary}
+En la segunda diapositiva.
+\end{corollary}
+
+\end{frame}
+
+\begin{frame}{Poner títulos informativos }
+
+\begin{columns}[t]
+
+
+\column{5cm}
+\begin{theorem}<1->
+En la columna de la izquierda.
+\end{theorem}
+
+
+\column{5cm}
+\begin{corollary}<2->
+En la columna de la derecha.\\
+Nueva línea
+\end{corollary}
+
+\end{columns}
+
+\end{frame}
+
+\subsection{Ideas básicas para demostraciones/implementaciones}
+
+
+\section*{Sumario}
+\begin{frame}{Sumario}
+
+\begin{itemize}
+\item El \alert{primer mensaje principal }de la exposición en una o dos
+líneas.
+\item El \alert{segundo mensaje principal} de la exposición en una o dos
+líneas.
+\item Quizás un \alert{tercer mensaje}, pero no más.
+\end{itemize}
+
+
+
+
+\medskip{}
+
+\begin{itemize}
+\item Perspectiva
+
+\begin{itemize}
+\item Lo que no hemos hecho todavía.
+\item Otras cosas pendientes.
+\end{itemize}
+\end{itemize}
+\end{frame}
+\appendix
+
+\section*{Apéndice}
+
+
+\subsection*{Lecturas complementarias}
+\begin{frame}[allowframebreaks]{Lecturas complementarias}
+
+
+\beamertemplatebookbibitems
+\begin{thebibliography}{1}
+\bibitem{Autor1990}A. Autor. \newblock\emph{Manual de Lo que sea}.\newblock
+Editorial, 1990.\beamertemplatearticlebibitems
+
+\bibitem{Alguien2002}S. Alguien.\newblock Sobre esto y aquello\emph{.}
+\newblock\emph{Revista Esto y Aquello}. 2(1):50--100, 2000.\end{thebibliography}
+\end{frame}
+
+\end{document}
